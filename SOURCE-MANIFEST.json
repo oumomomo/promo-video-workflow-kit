@@ -23,8 +23,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8329,
-      "sha256": "c2433c9655ca5ee2c36908b823be4e35fa6ae15e95abf1103d9e617c9ef0c197"
+      "bytes": 9381,
+      "sha256": "bbd5c409c70d39178418027d27a3b81a05bade4190fc07d579d2a05a8fb01d81"
     },
     {
       "path": "RELEASE-STATUS.md",
@@ -78,8 +78,8 @@
     },
     {
       "path": "docs/首次使用.md",
-      "bytes": 7216,
-      "sha256": "f286f3acf31db848f9b71627ccbcc6505fe785d393634ea0bb7975cabc311a67"
+      "bytes": 7841,
+      "sha256": "1ef60c621012499f104e38812c24740d69f4e4b9951fd9bcdcce131ce1a05865"
     },
     {
       "path": "docs/首次安装自检报告.md",

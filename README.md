@@ -24,6 +24,20 @@
 
 ## 从哪里开始
 
+已经装有Git、Python3.10+、FFmpeg/ffprobe时，可直接复制以下下载和自检命令（macOS/Linux）：
+
+```sh
+git clone https://github.com/oumomomo/promo-video-workflow-kit.git
+cd promo-video-workflow-kit
+python3 video_setup.py doctor
+```
+
+Windows的Git命令相同，最后一行可用`py -3 video_setup.py doctor`。没有Git可下载发行ZIP，解压后在根目录运行自检。这是完整源码的获取和运行条件检查，不会自动安装系统运行时、注册所有AI宿主或配置云账号。
+
+也可以把仓库链接连同这句话交给能读写本地文件和运行命令的AI工具：
+
+> 请帮我安装并检查这个宣传片工具包：https://github.com/oumomomo/promo-video-workflow-kit 。读取README和首次使用指南，下载完整目录，先检查Python和FFmpeg；只补本次所需依赖。安装阶段不调用付费服务、不要求我先填所有Key。完成后告诉我该打开哪个目录、怎样用自己的素材做第一条片。需要服务密钥时由我在自己的环境中填写。
+
 1. 下载并解压[发行包](https://github.com/oumomomo/promo-video-workflow-kit/releases/tag/v0.7.2)或本仓库，安装 **Python 3.10+、FFmpeg／ffprobe（含 libx264）**。Node 和额外 Python 依赖按所选模块说明安装。
 2. 将需要的技能整个文件夹安装到 AI 工具支持的 Skill 目录。扩展工具和素材库依赖的同包技能需要保持同级；不要只复制 SKILL.md。
 3. 给 AI 具体目标，提供自己的图片／录屏；或者使用 AI 当前实际可用的生成工具。图像、视频、声音模型的服务和额度不随包提供。
