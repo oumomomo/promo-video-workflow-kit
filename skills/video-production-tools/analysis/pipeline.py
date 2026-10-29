@@ -19,7 +19,7 @@ def sha(p):
   for b in iter(lambda:f.read(1048576),b''):h.update(b)
  return h.hexdigest()
 def run(cmd):return subprocess.run([str(v) for v in cmd],check=True,capture_output=True,text=True)
-from runtime import gateway
+from runtime import lookup_source
 
 def analysis_windows(duration):
  if duration<=0:raise ValueError('duration must be positive')
@@ -127,7 +127,7 @@ def process(source,out,cloud,authorized,submit,source_uri=None):
   if canonical.is_file() and sha(canonical)==digest:source=canonical
   source_uri=source_uri or previous.get('sourceUri')
  save(out/'run-status.json',{'executionStatus':'running','stage':'analysis_and_evidence'})
- lookup=gateway('lookup','--file',str(source))
+ lookup=lookup_source(source,require_library=submit)
  if lookup.get('match')=='excluded':raise RuntimeError('source_excluded')
  probe_path=out/'probe.json'
  if not probe_path.exists():save(probe_path,json.loads(run(['ffprobe','-v','error','-show_streams','-show_format','-of','json',source]).stdout))
@@ -167,7 +167,7 @@ def process(source,out,cloud,authorized,submit,source_uri=None):
       if attempt<2:time.sleep(2**attempt)
   save(state,w);windows.append(w)
   print(digest[:16],start,w['status'],flush=True)
- result={'version':VERSION,'sourceUri':source_uri,'source':str(source),'sourceSha256':digest,'duration':duration,'executionStatus':'completed_with_uncertainty' if all(w['status'] in ['candidate','no_audio'] for w in windows) else 'incomplete','semanticStatus':'model_candidates_not_human_approved','cuts':read(cuts_path),'windows':windows,'limitations':['Cut timestamps are machine candidates, not certified edit boundaries.','BGM, voiceover and SFX are separate; ambiguous audio is unclassified.','No stem separation or licensed reusable audio is implied.']}
+ result={'version':VERSION,'sourceUri':source_uri,'source':str(source),'sourceSha256':digest,'sourceLibraryLookup':lookup,'duration':duration,'executionStatus':'completed_with_uncertainty' if all(w['status'] in ['candidate','no_audio'] for w in windows) else 'incomplete','semanticStatus':'model_candidates_not_human_approved','cuts':read(cuts_path),'windows':windows,'limitations':['Cut timestamps are machine candidates, not certified edit boundaries.','BGM, voiceover and SFX are separate; ambiguous audio is unclassified.','No stem separation or licensed reusable audio is implied.']}
  save(out/'analysis.json',result)
  md='# 自动拉片结果\n\n状态：'+result['executionStatus']+'。执行完成不等于语义全部确认。\n\n'
  blocks=[]

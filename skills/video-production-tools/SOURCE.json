@@ -51,7 +51,8 @@
     "local analysis retains frame/sound evidence; no private Jev or SFX catalog execution",
     "project-local detailed archive validation, decisions/snapshots/revision decoded checks and rollback",
     "user-owned music library selection, license hash checks and audio-plan attachment",
-    "cloud request parsing tested with mocked responses only"
+    "cloud request parsing tested with mocked responses only",
+    "v0.7.2: independent analysis can prepare evidence without creating a library; configured/protected libraries and submit still require the original gateway; websockets minimum15 matches proxy=None"
   ],
   "licenseScope": "original application code only; third-party notices retain their own licenses"
 }

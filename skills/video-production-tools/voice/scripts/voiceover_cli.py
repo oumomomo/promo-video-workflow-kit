@@ -350,7 +350,7 @@ async def _call_doubao_v3(request_body: dict[str, Any], api_key: str, resource_i
     try:
         from websockets.asyncio.client import connect  # type: ignore
     except ImportError as error:
-        raise RuntimeError("缺少 websockets>=14；请先安装官方 V3 示例依赖。") from error
+        raise RuntimeError("缺少 websockets>=15,<17；请在当前Python环境安装扩展requirements。") from error
 
     headers = {
         "X-Api-Key": api_key,

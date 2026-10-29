@@ -18,8 +18,8 @@ BACKEND_MODULES = ('asset-library', 'asset_classification', 'asset_compat', 'ass
 
 def files():
     chosen = [ROOT / n for n in ('.gitignore', 'README.md', 'LICENSE', 'RELEASE-STATUS.md',
-                                 'THIRD_PARTY_NOTICES.md', 'video_ref.py', 'video_make.py', 'video_motion.py', 'video_review.py', 'video_library.py', 'video_tools.py',
-                                 'tests/test_reference_flow.py', 'tests/test_production_flow.py', 'tests/test_motion_flow.py', 'tests/test_library_flow.py', 'tests/test_production_tools.py', 'tests/test_google_music.py', 'scripts/package.py')]
+                                 'THIRD_PARTY_NOTICES.md', 'video_ref.py', 'video_make.py', 'video_motion.py', 'video_review.py', 'video_library.py', 'video_tools.py', 'video_setup.py',
+                                 'tests/test_reference_flow.py', 'tests/test_production_flow.py', 'tests/test_motion_flow.py', 'tests/test_library_flow.py', 'tests/test_production_tools.py', 'tests/test_google_music.py', 'tests/test_first_install.py', 'scripts/package.py')]
     for folder in ('docs', 'templates', 'examples'):
         chosen += sorted((ROOT / folder).glob('*.md'))
     chosen += [SKILL / 'SKILL.md', SKILL / 'scripts/video_ref.py', SKILL / 'references/commands.md']
@@ -71,7 +71,7 @@ def main():
     if out.exists():
         raise ValueError('目标已存在，拒绝覆盖')
     sources = files()
-    manifest = {'version': '0.7.1-local-candidate', 'status': 'github_test_preview_candidate',
+    manifest = {'version': '0.7.2-local-candidate', 'status': 'github_test_preview_candidate',
                 'licenseReview': 'maintainer_confirmed_MIT_with_third_party_exceptions', 'motionEntries': 363, 'existingMediaIncluded': False, 'productionToolsIncluded': True, 'promoPitfallRules': 24, 'cloudCredentialsIncluded': False, 'ownAssetLibraryEntryIncluded': True, 'reviewPluginIncluded': True, 'reviewNodeModulesIncluded': False, 'files': []}
     payloads = []
     for p in sources:
@@ -82,7 +82,7 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(out, 'x', compression=zipfile.ZIP_DEFLATED) as archive:
         for relative, data in payloads:
-            info = zipfile.ZipInfo('video-workflow-kit-v0.7.1/' + relative, date_time=(2026, 1, 1, 0, 0, 0))
+            info = zipfile.ZipInfo('video-workflow-kit-v0.7.2/' + relative, date_time=(2026, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, data)

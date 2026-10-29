@@ -16,6 +16,8 @@ def main():
   installed=(PLUGIN/'node_modules/@modelcontextprotocol/sdk').is_dir() and (PLUGIN/'node_modules/@modelcontextprotocol/ext-apps').is_dir() and (PLUGIN/'node_modules/zod').is_dir()
   print(json.dumps({'node':node,'nodeVersion':version,'node20OrNewer':bool(version and int(version[1:].split('.')[0])>=20),'npm':npm,'dependenciesInstalled':installed,'browserBundleIncluded':(PLUGIN/'dist/widget.js').is_file(),'autoSend':'depends_on_host_thread_bridge_and_Codex; not_guaranteed','privateMediaIncluded':False},ensure_ascii=False,indent=2));return
  if not node:raise ValueError('请先安装Node.js 20+')
+ version=subprocess.check_output([node,'--version'],text=True).strip()
+ if int(version.lstrip('v').split('.')[0])<20:raise ValueError('打标插件需要Node.js 20+；当前版本为'+version)
  if a.action=='setup':
   if not npm:raise ValueError('请先安装npm')
   subprocess.run([npm,'ci','--ignore-scripts',*(['--offline'] if a.offline else [])],cwd=PLUGIN,check=True);return

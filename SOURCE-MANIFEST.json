@@ -1,5 +1,5 @@
 {
-  "version": "0.7.1-local-candidate",
+  "version": "0.7.2-local-candidate",
   "status": "github_test_preview_candidate",
   "licenseReview": "maintainer_confirmed_MIT_with_third_party_exceptions",
   "motionEntries": 363,
@@ -23,13 +23,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 7609,
-      "sha256": "798cf64c2a127cb13180260f286dbf6675fd901d3cc3911a97a388cc842e96d7"
+      "bytes": 8329,
+      "sha256": "c2433c9655ca5ee2c36908b823be4e35fa6ae15e95abf1103d9e617c9ef0c197"
     },
     {
       "path": "RELEASE-STATUS.md",
-      "bytes": 7954,
-      "sha256": "992812457f93ea77bb28c3ccc162559e2c4baa8427fbd7cf76aec404f178eb26"
+      "bytes": 9256,
+      "sha256": "31f6e7eca00a81ab1a3b43e1b54513cbc8bc3808281db23c2669b99c08d7c891"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -38,8 +38,8 @@
     },
     {
       "path": "docs/与完整工作流的差距.md",
-      "bytes": 3816,
-      "sha256": "153eec7272b7c34d515ffca4f369b1d4b721c84c955fc415fa5e8c62382c8fe2"
+      "bytes": 4023,
+      "sha256": "2644f76159d38ace9137fa675c43bacbd954d439796b7e37d1a7e78d847d29a2"
     },
     {
       "path": "docs/五步用法.md",
@@ -53,8 +53,13 @@
     },
     {
       "path": "docs/安装与制作.md",
-      "bytes": 2524,
-      "sha256": "30394e7f4a3622f8e820651c9ccdd1cea6f7d10a8a4e4cd0ac16a8c58d7bc963"
+      "bytes": 2750,
+      "sha256": "53363052be92814aa990c9f6d42cc62c451a3263098fc9a68fea1c1f7c82e7c3"
+    },
+    {
+      "path": "docs/密钥与服务配置.md",
+      "bytes": 7284,
+      "sha256": "a7f90593432f5fc4aff0d4bb825197633e94ac217173d59bf34d20f65724c33c"
     },
     {
       "path": "docs/建立自己的素材库.md",
@@ -63,13 +68,23 @@
     },
     {
       "path": "docs/打标插件安装.md",
-      "bytes": 3109,
-      "sha256": "543820da1c9a77aee7c1572379300ed0636ada584d3e592e10b8f6deb718d120"
+      "bytes": 3168,
+      "sha256": "7d297d8d4548b7e9145431522d234c7012b40aca7fa4ffe0376e9169de639202"
     },
     {
       "path": "docs/项目介绍.md",
       "bytes": 1121,
-      "sha256": "3a57b3f6eb9fc0c335abbe14a340d16c511b5775bdf3c52f080792d31451d7e0"
+      "sha256": "623a9fcf138afc863caf34d98fce91146960dfebced53ba6d2de5ecf61feca2f"
+    },
+    {
+      "path": "docs/首次使用.md",
+      "bytes": 7216,
+      "sha256": "f286f3acf31db848f9b71627ccbcc6505fe785d393634ea0bb7975cabc311a67"
+    },
+    {
+      "path": "docs/首次安装自检报告.md",
+      "bytes": 4218,
+      "sha256": "7e255693b47bebcad25db6582bf672c7538e0acfdf060ab373fdbf226d9558a1"
     },
     {
       "path": "examples/数字更新镜头.md",
@@ -163,8 +178,8 @@
     },
     {
       "path": "scripts/package.py",
-      "bytes": 6396,
-      "sha256": "188724903625897fd8c263429c85559101612a2a878e1dfb0b8ebc0b5ab8664f"
+      "bytes": 6445,
+      "sha256": "8db1abc48640a588fc8b2cf5403beeb6e89ef2949143fb3380a2205dbc60e532"
     },
     {
       "path": "skills/video-asset-library/SKILL.md",
@@ -204,7 +219,7 @@
     {
       "path": "skills/video-making-kit/scripts/video_make.py",
       "bytes": 25125,
-      "sha256": "bbdb54e4a4aafaa9904b107859507f370552613659f4a036d7237dd62850f3b0"
+      "sha256": "d697c234905050f08c05b925e0fc6a1def1a9428896056ee01bb5de9be31fdf3"
     },
     {
       "path": "skills/video-motion-kit/SKILL.md",
@@ -3643,13 +3658,13 @@
     },
     {
       "path": "skills/video-production-tools/SOURCE.json",
-      "bytes": 2467,
-      "sha256": "7e200f2d58005d33285251454a68f921b696e69ffac332e516c9365480a546be"
+      "bytes": 2670,
+      "sha256": "a3a2a1ab63592cd7c440b3c202d156b91322c90a34623bbe53dc814c1563ff93"
     },
     {
       "path": "skills/video-production-tools/analysis/pipeline.py",
-      "bytes": 17162,
-      "sha256": "475ae5ab31af41c6a13561b0fd31fc17355356d3295f80b8b778c102f8fbf9db"
+      "bytes": 17203,
+      "sha256": "2b90271f1cfd593aaa240701c4f7dd3bf791db1adcd27b14c26687e087288839"
     },
     {
       "path": "skills/video-production-tools/analysis/precision.py",
@@ -3673,8 +3688,8 @@
     },
     {
       "path": "skills/video-production-tools/references/operations.md",
-      "bytes": 10270,
-      "sha256": "fd0204572fcd368bea7019b28ca58b63f6c82152bd40b86397d6b89b97db1536"
+      "bytes": 10435,
+      "sha256": "9d965aba2c3e5b190710bba68b8a2b8a4051710cef2a04d97325899e9289ecac"
     },
     {
       "path": "skills/video-production-tools/references/review-method.md",
@@ -3689,7 +3704,7 @@
     {
       "path": "skills/video-production-tools/requirements.txt",
       "bytes": 42,
-      "sha256": "413fe705f0de0f785b17b89f76728d20be73716ec0a5160b742ded175ad18313"
+      "sha256": "db95af7bd51d8ed6bd96d69ef9868266115815dcca1973c1476dc542543c3da2"
     },
     {
       "path": "skills/video-production-tools/scripts/archive_state.py",
@@ -3728,8 +3743,8 @@
     },
     {
       "path": "skills/video-production-tools/scripts/runtime.py",
-      "bytes": 890,
-      "sha256": "b4ce3fd61dd19c092e80df5cccc8366c7860913f66e1403c2dc4a4b41bdb44a7"
+      "bytes": 1485,
+      "sha256": "8c465f068b3199b64fb6aa10657e52e99c8d3aed77a965cb9dd276027839d3f8"
     },
     {
       "path": "skills/video-production-tools/voice/references/voice-style-registry.json",
@@ -3738,8 +3753,8 @@
     },
     {
       "path": "skills/video-production-tools/voice/scripts/voiceover_cli.py",
-      "bytes": 33463,
-      "sha256": "8a7a5f5cd47a8b0c2310f14adbda9b96f66556e80c69a8a8a18bfd0a06b2a90a"
+      "bytes": 33481,
+      "sha256": "d3ed9718daea2b1a9a3b5338e9a41055ca1c91c0c41fa1437f5eb265d5285a91"
     },
     {
       "path": "skills/video-reference-kit/SKILL.md",
@@ -3862,6 +3877,11 @@
       "sha256": "caa4de6ced71db2ad76934b25116b3e6cfec4404f1d2dbee557772754ec5036d"
     },
     {
+      "path": "tests/test_first_install.py",
+      "bytes": 3598,
+      "sha256": "c6bdcf8905105c956252635f059fd7cb641e08746cc52e00d561e97854b4c50f"
+    },
+    {
       "path": "tests/test_google_music.py",
       "bytes": 3233,
       "sha256": "e51d2b372a20d1eff7a7c131fd6f70bd72a27a8d1ac27ed682f9b7191b76743b"
@@ -3883,8 +3903,8 @@
     },
     {
       "path": "tests/test_production_tools.py",
-      "bytes": 9907,
-      "sha256": "71699093e5c49816463bc825389613473bd9903e7a04dea2092e2f506ccd564e"
+      "bytes": 11148,
+      "sha256": "930e13cc86d6bcda6ed3bd061508e36b2c495f568fe3790172a328da45e74f1c"
     },
     {
       "path": "tests/test_reference_flow.py",
@@ -3913,13 +3933,18 @@
     },
     {
       "path": "video_review.py",
-      "bytes": 2302,
-      "sha256": "0f41e4e6247b39beb694f785a9311e7887bee41ea9bdbc98709fbeec0be3c056"
+      "bytes": 2495,
+      "sha256": "61b63a86c4b62497c1305fb166cef21e041cd097f54f6374bbc36853ae983945"
+    },
+    {
+      "path": "video_setup.py",
+      "bytes": 6124,
+      "sha256": "d00b95637be2dbd38187340bf521aef20ff2f368d22431e612103bd17cc40111"
     },
     {
       "path": "video_tools.py",
-      "bytes": 954,
-      "sha256": "7398e9f4185ca6c04bc4a55d90ea1ea93bdcd719a3a7719b564fad1bbc03baa8"
+      "bytes": 1065,
+      "sha256": "ab9d01f565dead74b0dcc57a3e2c1da9d10a42eca5d9173dfd82a3d857c0950f"
     }
   ]
 }

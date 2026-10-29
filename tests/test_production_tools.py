@@ -22,6 +22,23 @@ class ToolsFlow(unittest.TestCase):
   out=self.r/'analysis';self.tool('analyze','--source',self.video,'--out',out,'--cloud','none',expect=1)
   result=json.loads(next(out.glob('*/analysis.json')).read_text());self.assertEqual(result['semanticStatus'],'model_candidates_not_human_approved');self.assertTrue(next(out.glob('*/precision.json')).is_file());self.assertTrue(next(out.glob('*/evidence.html')).is_file())
   self.assertTrue(all(x['status']=='needs_cloud_authorization' for x in result['windows']))
+ def test_standalone_local_analysis_does_not_require_or_create_a_library(self):
+  out=self.r/'standalone-analysis'
+  self.run_cli('video_tools.py','analyze','--source',self.video,'--out',out,'--cloud','none',expect=1)
+  result=json.loads(next(out.glob('*/analysis.json')).read_text())
+  self.assertEqual(result['sourceLibraryLookup']['match'],'not_checked')
+  self.assertEqual(result['executionStatus'],'incomplete')
+  self.assertTrue(next(out.glob('*/precision.json')).is_file())
+  self.assertEqual(list(out.rglob('*.sqlite')),[])
+ def test_standalone_analysis_does_not_bypass_invalid_shared_config_or_submit(self):
+  config=Path(self.env['OMM_ASSET_CONFIG']);config.write_text('{}')
+  out=self.r/'invalid-config-analysis';self.run_cli('video_tools.py','analyze','--source',self.video,'--out',out,'--cloud','none',expect=1)
+  self.assertEqual(list(out.rglob('analysis.json')),[])
+  self.assertIn('已有统一库配置无效',(out/'batch-status.json').read_text())
+  config.unlink();out=self.r/'submit-without-library'
+  self.run_cli('video_tools.py','analyze','--source',self.video,'--out',out,'--cloud','none','--submit',expect=1)
+  self.assertEqual(list(out.rglob('analysis.json')),[])
+  self.assertEqual(list(out.rglob('*.sqlite')),[])
  def test_voice_style_cache_integrity_no_paid_requests(self):
   p=TOOLS/'voice/scripts/voiceover_cli.py';spec=importlib.util.spec_from_file_location('test_voice',p);m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
   registry=m.load_json(m.REGISTRY_PATH);style=registry['styles'][0];cache=self.r/'cache';output=self.r/'voice.mp3'

@@ -2,6 +2,8 @@
 
 从包根目录执行。--library传使用者自己已建的库；已有统一配置时省略。不得为测试在既有工作区创建第二套主库。
 
+首次配置先读包根目录`docs/首次使用.md`和`docs/密钥与服务配置.md`。本地分析不提交时无需先建库或登录Google；基础剪辑不要求配音/音乐Key。
+
 ## 产品片段卡
 
 ```sh
@@ -17,7 +19,7 @@ intake返回source-index与segments路径。每段填写id/title/observed/keywor
 依赖Python3.10+、FFmpeg/ffprobe、numpy；pip安装见requirements.txt。先用本地原件：
 
 ```sh
-python3 video_tools.py --library ./my-library analyze --source ./recording.mp4 --out ./analysis --cloud none
+python3 video_tools.py analyze --source ./recording.mp4 --out ./analysis --cloud none
 ```
 
 本地输出cuts.json、analysis.json、precision.json、sound-reuse.json、evidence.html与HANDOFF.md，原始帧PTS与混音瞬态只作候选证据。cloud none的语义状态保持incomplete/needs_cloud_authorization，退出1是明确未完成语义分析，不是声称已精拉；文件仍可复核。
