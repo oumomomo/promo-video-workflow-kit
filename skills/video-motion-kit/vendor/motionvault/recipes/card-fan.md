@@ -1,0 +1,15 @@
+# 扇形卡叠
+
+五张白色卡片原本微微错落地叠着，悬停时以底部为轴扇形展开，离开时收回。
+
+来源：https://github.com/xiyu519/MotionVault/blob/0a201da92e4b4fa7436b1c79c7f249bc66329644/src/components/effects/layout/CardFan.tsx
+
+版本：0a201da92e4b4fa7436b1c79c7f249bc66329644
+
+许可：MIT（保留上游 LICENSE）
+
+触发：hover
+
+## 原始实现提示词
+
+Create a React component called CardFan using React + Tailwind CSS + Framer Motion. Render 5 white cards (132px × 190px, rounded-xl, 1px zinc-200 border, soft shadow 0 10px 30px -12px rgba(0,0,0,0.15)) absolutely stacked at the horizontal center of a relative wrapper. Each card contains tiny mock content: a 24px zinc-200 avatar dot next to a short text bar, two full-width zinc-100 text bars below, and a small mono index (01–05, zinc-300) at the bottom-left. At rest the stack has slight offsets: rotate (i-2)*1.4deg, translateX (i-2)*6px, translateY -i*2px, with the middle card on top (zIndex 10 - |i-2|). On wrapper hover (mouseenter/mouseleave toggling a boolean in useState), animate every card with a spring (stiffness 260, damping 20) into a fan: rotations -16deg, -8deg, 0deg, 8deg, 16deg, translateX -132, -66, 0, 66, 132, and a subtle arc translateY of 10, 4, 0, 4, 10. Set transform-origin to 50% 100% so every card pivots around its bottom center. On mouse leave the same spring gathers the cards back into the stack. Transform and opacity only — keep it 60fps.

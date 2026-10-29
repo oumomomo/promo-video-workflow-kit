@@ -1,0 +1,15 @@
+# 描边文字点亮
+
+巨大的 STROKE 平时只是浅灰细描边，悬停时一条低饱和渐变高光沿字形扫过，填充被短暂点亮后又归于安静。
+
+来源：https://github.com/xiyu519/MotionVault/blob/0a201da92e4b4fa7436b1c79c7f249bc66329644/src/components/effects/svg/StrokeHoverPreview.tsx
+
+版本：0a201da92e4b4fa7436b1c79c7f249bc66329644
+
+许可：MIT（保留上游 LICENSE）
+
+触发：hover
+
+## 原始实现提示词
+
+Create a React component called StrokeHoverText using React + Tailwind CSS + Framer Motion. It renders a 320x140 viewBox SVG with the word 'STROKE' (62px, Inter 700, letter-spacing 0.06em, centered via x=160 textAnchor middle) stacked in three layers. Layer 1 (resting state): the glyph as a pale outline — fill none, 1px stroke #D4D4D8 (zinc-300). Layer 2 (highlight sweep): the same text stroked 2.2px with a low-saturation horizontal linearGradient (transparent zinc-400 → #71717A → #18181B → zinc-400 transparent), wrapped in a <g> carrying an SVG mask whose only content is a 110px-wide motion.rect filled with a soft horizontal white-to-transparent gradient; on hover, increment a runId in state and key the mask rect on it so it remounts and sweeps x from -120 to 330 over 1.15s easeInOut — a soft-edged light band travelling across the strokes. Layer 3 (fill flash): the same text filled #18181B, keyed on runId, animating opacity keyframes [0, 0.9, 0.12] with times [0, 0.55, 1] over the same 1.15s so the fill briefly lights up mid-sweep then settles to a faint tint. Trigger on the wrapper's onMouseEnter (cursor-pointer, select-none), light background, use component-unique gradient/mask ids, container aria-label.

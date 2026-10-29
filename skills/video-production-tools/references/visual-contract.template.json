@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "draft",
+  "visualWorld": {
+    "sourceMaterials": [],
+    "continuityMechanism": "",
+    "colorSource": {
+      "kind": "",
+      "sourceId": "",
+      "evidence": "",
+      "rule": ""
+    },
+    "genericAIPaletteAllowed": false
+  },
+  "referencePolicy": {
+    "selectedReferences": [],
+    "originalReason": ""
+  },
+  "shotBindings": []
+}

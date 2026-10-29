@@ -1,0 +1,78 @@
+{
+  "source": "installed personal codex-video-review plugin snapshot",
+  "sourceVersion": "0.1.15+codex.20260928",
+  "publicUpstream": "not_verified",
+  "license": "MIT; maintainer confirmed public distribution",
+  "files": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sourceSha256": "28d8bcca3d8a899b56dd191cb8f06d10b807c0b69186b0defe9575acedc76982"
+    },
+    {
+      "path": ".mcp.json",
+      "sourceSha256": "639a213f320850a0a80967b1e949d3e5e8d86cd516cdf30abda808cbe2b5963f"
+    },
+    {
+      "path": "package.json",
+      "sourceSha256": "d476cb0114b7b8b5d7123c9361a2c3ef0fbda2506e7d640d430fdbd73a1fb744"
+    },
+    {
+      "path": "package-lock.json",
+      "sourceSha256": "9a45936a0e907ca128225d8f02940ea8b9932cbf86449805b99b7e25e9eee2b4"
+    },
+    {
+      "path": "README.md",
+      "sourceSha256": "fb7e12c52f5c5e8df49a38752b7a15f7c517ef054802e5059eb196d7a3bf65e5"
+    },
+    {
+      "path": "src/widget.js",
+      "sourceSha256": "e4897b614f36485ced7169fb83cf39edf219aadb001c2e475842b27d2ee3b5b9"
+    },
+    {
+      "path": "dist/widget.js",
+      "sourceSha256": "fd495b5b2f27eb4cd14fab187bb6ad56ed1ec7bee9e3dfce0c2965fca4250a0b"
+    },
+    {
+      "path": "mcp/server.mjs",
+      "sourceSha256": "3cdcff4e924185a9dcc3ff063155c3692d6eb004cc9590447d28f1f6a3d51e1e"
+    },
+    {
+      "path": "mcp/render_review_frame.py",
+      "sourceSha256": "2427d3b4f78969527e21c4acf60a0ccb2e6a011e7b903e4bdd968fda2a6f88bc"
+    },
+    {
+      "path": "web/index.html",
+      "sourceSha256": "20145fbba02c578b3153d3f869b6eeeef5fbe409a0e36ad91e603ffe5523eafb"
+    },
+    {
+      "path": "web/style.css",
+      "sourceSha256": "ab3bb52ec4d302d367277375a1d414b5388dcbefeb7362a0559c2a0d416c0b65"
+    },
+    {
+      "path": "scripts/probe.mjs",
+      "sourceSha256": "fe1e86b2bc7cd2ec73df589dcb122993281ddb1c02c87f4e5b28b68f2c9947f5"
+    },
+    {
+      "path": "scripts/preview.mjs",
+      "sourceSha256": "d761593087f2c06f7fbf446f1847151c161b56cf765eab06ea32dd1845d589b9"
+    },
+    {
+      "path": "skills/video-review/SKILL.md",
+      "sourceSha256": "9f972b3af7e9eca84f100bdcba412691fbefa0d23a2c1b49a51c6fca9670606b"
+    }
+  ],
+  "adaptations": [
+    "preview.mjs uses server path relative to its own module and preserves environment; no hardcoded private project examples in README",
+    "server subprocess cwd uses OS temporary directory instead of POSIX root",
+    "npm lockfile updated within declared package ranges to patch 8 reported advisories; browser bundle rebuilt",
+    "probe failure diagnostics include observed state",
+    "portable-probe.mjs tests real MP4, process restart, unrelated working directory and hash/path boundaries",
+    "probe mock polling timeout expanded to tolerate startup latency; original first pass timed out without diagnostic detail",
+    "distribution plugin manifest version 0.1.15+workflowkit.20261029"
+  ],
+  "existingMediaIncluded": false,
+  "dependenciesIncluded": false,
+  "snapshotName": "0.1.15 portable workflow-kit adaptation",
+  "licenseReview": "maintainer_confirmed_owned_code_MIT_2026-10-29",
+  "licenseScope": "original application code only; third-party notices retain their own licenses"
+}

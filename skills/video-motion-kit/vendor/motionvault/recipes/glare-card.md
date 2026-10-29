@@ -1,0 +1,15 @@
+# 金属眩光卡
+
+一道宽斜向的眩光带随鼠标扫过深色卡面，平移中带一点旋转，像光掠过拉丝金属。
+
+来源：https://github.com/xiyu519/MotionVault/blob/0a201da92e4b4fa7436b1c79c7f249bc66329644/src/components/effects/card/GlareCard.tsx
+
+版本：0a201da92e4b4fa7436b1c79c7f249bc66329644
+
+许可：MIT（保留上游 LICENSE）
+
+触发：move
+
+## 原始实现提示词
+
+Create a React component called GlareCard using React + Tailwind CSS + Framer Motion, recreating the Aceternity Glare Card. Render a dark metallic card (320×192px, rounded-xl, 1px zinc-800 border, overflow hidden) whose face is a subtle diagonal metal gradient (zinc-800 → zinc-900 → zinc-950 at 160deg) with minimal white content (mono uppercase label, semibold title, two-line muted description). The glare: one oversized band (width ~96px, height 260% of the card, centered) filled with a horizontal linear-gradient(90deg, transparent, rgba(255,255,255,0.06), rgba(255,255,255,0.22), rgba(255,255,255,0.06), transparent) — a wide soft streak. Track the pointer's X over the card (onPointerMove, normalized [0,1], useMotionValue + useSpring stiffness 180 damping 22) and derive via useTransform with strictly increasing [0,1] input: the band's translateX sweeps from -130% to +130% of its own width while its rotate tilts gently from -28deg to -14deg, like raking light. Gate visibility with a hover MotionValue (0/1 on enter/leave, useSpring stiffness 200 damping 24) mapped to the band's opacity so the glare fades in only while interacting. All transforms bound directly to MotionValues — no useState in the pointer path.

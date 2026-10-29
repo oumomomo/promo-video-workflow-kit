@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "^1.7.4",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "esbuild": "^0.25.5",
+    "zod": "^4.4.3"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/widget.js --bundle --format=iife --platform=browser --target=es2022 --outfile=dist/widget.js",
+    "check": "node --check mcp/server.mjs && node --check src/widget.js"
+  }
+}

@@ -1,0 +1,13 @@
+# 视觉合同、原片对照与验收
+
+视觉合同回答：参考从哪里来，整片如何连续，颜色为什么这样选，每个镜头要继承什么、替换什么、明确拒绝什么。它是可核对的制作约定，不是法律合同或审美打分器。
+
+例如原片中“点击列头后排序”：先核对同一页面与连续动作；可继承工具栏、列头、字段和点击顺序，把示例记录换成本片内容。不能把另一个页面的结果拼进来，当作当前操作必然产生的功能。
+
+逐镜证据表至少包含schemaVersion、lockedStoryboard、sources、shots。sources逐个登记assetId、path、sha256。shots逐镜写shotId、intent、sourceEvidence、inherit、mayAdapt、forbid、gaps、status。sourceEvidence绑定assetId、实际observed、keyframesSeconds或imageRegion、reviewScope；真正核实动作须有连续reviewedTimeRangeSeconds。
+
+开画前sourceRecreation保存assetId、sourceMomentSeconds（图片可用imageRegion）、sourceFramePath、sourceFrameSha256、具体recreate结构及adaptContent列表。交付前追加从实际候选取出的candidateFramePath和candidateFrameSha256，目视对照布局、控件、字段类型、图标、状态关系与内容替换，再写comparisonStatus、comparisonNotes与reviewedBy。缺口保留pending_evidence；已核实功能才写ready并保留verifiedBy及真实观察范围。
+
+没有原片而获准原创时记录concept_demo、conceptReason与conceptAuthorization；它仍不是产品能力证据。项目文档保留缺口，不自行加“概念演示”画面水印。普通插画、纸艺或原创隐喻可按创作方向制作，不强制冒充真实产品界面。
+
+验收分六件事：文件完整、静帧查看、正常速度整片观看、声音实际听辨、真人审美反馈、发布授权。检查脚本只能量机械项和记录齐全程度。AI可以指出失败，不得冒充人类批准；自动分析候选、片段卡、分镜采用和批准是不同状态。

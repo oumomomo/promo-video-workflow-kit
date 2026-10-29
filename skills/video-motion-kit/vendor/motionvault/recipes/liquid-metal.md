@@ -1,0 +1,15 @@
+# 液态金属按钮
+
+一团模糊高光随鼠标在深色表面快速流动，像水银反光；边缘一圈细亮边。
+
+来源：https://github.com/xiyu519/MotionVault/blob/0a201da92e4b4fa7436b1c79c7f249bc66329644/src/components/effects/button/LiquidMetal.tsx
+
+版本：0a201da92e4b4fa7436b1c79c7f249bc66329644
+
+许可：MIT（保留上游 LICENSE）
+
+触发：move
+
+## 原始实现提示词
+
+Create a React component called LiquidMetal using React + Tailwind CSS + Framer Motion MotionValues (zero React re-renders on pointer move — ThreeUI Liquid Metal, restrained monochrome). A dark zinc-950 button (h-11, rounded-lg, white text) edged by a hairline bright inner ring (shadow inset 0 0 0 1px rgba(255,255,255,0.16) plus a subtle inset top highlight). Track both cursor axes inside the button with two useMotionValues updated in onPointerMove via getBoundingClientRect, each smoothed by a fast useSpring (stiffness 400, damping 30). Bind two overlay layers: (1) a large molten blob — a 128px rounded-full span with blur-2xl and background radial-gradient(circle, rgba(255,255,255,0.42), rgba(255,255,255,0.12) 45%, transparent 72%) — whose x/y are useTransform(spring, v => v - 64) so it sloshes after the cursor like mercury; (2) a sharper 90px radial glint built with useMotionTemplate from the same springs, on a full-cover span. Reset both MotionValues off-canvas (-200px) on pointer leave. Press feedback: whileTap scale 0.96 with a springy transition.

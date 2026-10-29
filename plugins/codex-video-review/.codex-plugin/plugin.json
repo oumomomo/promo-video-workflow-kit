@@ -1,0 +1,23 @@
+{
+  "name": "codex-video-review",
+  "version": "0.1.15+workflowkit.20261029",
+  "description": "Annotate local videos in a Codex side panel and turn marks into scoped edit requests.",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Video Review",
+    "shortDescription": "在 Codex 右侧面板看视频、画标记并提交局部修改意见",
+    "longDescription": "Open project videos in the Codex side panel, mark exact frames with pen, line, arrow, or box, save comments bound to the video hash, and send notes with marked frames for scoped editing.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Interactive video annotation"
+    ],
+    "defaultPrompt": "打开这个视频的 Codex 打标界面。"
+  },
+  "mcpServers": "./.mcp.json"
+}

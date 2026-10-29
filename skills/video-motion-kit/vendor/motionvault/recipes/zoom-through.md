@@ -1,0 +1,15 @@
+# 滚动穿越卡片
+
+四张卡片排成纵深队列：最前一张放大掠过镜头淡出，后一张从 0.7 倍放大补位，直至抵达终点。
+
+来源：https://github.com/xiyu519/MotionVault/blob/0a201da92e4b4fa7436b1c79c7f249bc66329644/src/components/effects/scroll/ZoomThrough.tsx
+
+版本：0a201da92e4b4fa7436b1c79c7f249bc66329644
+
+许可：MIT（保留上游 LICENSE）
+
+触发：scroll
+
+## 原始实现提示词
+
+Create a React component called ZoomThrough using React + Tailwind CSS + Framer Motion. Use the internal-scroll-container pattern (320px overflow-y auto viewport, overscroll-contain, thin scrollbar, never page scroll) with a ~3× track (1000px) and a sticky centered stage on a zinc-50 background. Stack 4 white cards (230px wide, rounded-xl, border, soft shadow, big mono number 01–04 + Chinese title + one line) absolutely centered with fixed z-index (front card highest). For card i, map useScroll({ container }) scrollYProgress with useTransform: scale [ (i-1)/4, i/4, (i+1)/4 ] → [0.7, 1, 2.8] and opacity [(i-0.55)/4, i/4, (i+0.55)/4, (i+0.95)/4] → [0, 1, 1, 0], so each card grows from the depths, flies past the camera and fades, revealing the next; the last card stops at scale 1 and stays. Smooth scrub, transform/opacity only. Include the top progress hairline and fading "向下滚动" hint.

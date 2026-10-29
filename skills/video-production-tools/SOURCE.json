@@ -1,0 +1,57 @@
+{
+  "source": "existing workflow tool snapshots adapted for distribution",
+  "files": [
+    {
+      "path": "scripts/product_reference.py",
+      "sourceSha256": "43a7b351461d61665ca8b76698712fc738dad3c13d9339806e8b8d39cdf85a22"
+    },
+    {
+      "path": "scripts/check_shot_evidence.py",
+      "sourceSha256": "b8a8e03b0e9e0a9066a73ef194b3313f6cc51b15ff5bc9e2162646464179f28b"
+    },
+    {
+      "path": "voice/scripts/voiceover_cli.py",
+      "sourceSha256": "f3345d4a1d33e0784139f98ba5087b7ac21e69319541302c462fd2db1e03627c"
+    },
+    {
+      "path": "analysis/pipeline.py",
+      "sourceSha256": "9f8f65e2219bebcce599753e9dc46a287b3dbb1201b75516a4ef472c6d550781"
+    },
+    {
+      "path": "analysis/precision.py",
+      "sourceSha256": "09e26e6dad078d5313566c23113012b65579da4afaef8f31fe9bc833024503b9"
+    },
+    {
+      "path": "analysis/render_report.py",
+      "sourceSha256": "e382498524cd630dc669956e15312e0214f59295c512900d0caa52a591a50a47"
+    },
+    {
+      "path": "analysis/render_evidence.py",
+      "sourceSha256": "3e0a97f0b07dfbdc47a189731288b8c90d4cbff97983428877a7328329a738d7"
+    },
+    {
+      "path": "analysis/sound_reuse.py",
+      "sourceSha256": "01f6a7dd5f98735cfb3be14163e286f5fecef24e65bd0f46b3a345ec3836b010"
+    },
+    {
+      "path": "scripts/archive_state.py",
+      "sourceSha256": "74dbeb269975c30ae1117fe20a5ef753b6ea9588173b7e5a9d73a011e0e52dad"
+    },
+    {
+      "path": "references/visual-contract.template.json",
+      "sourceSha256": "62ebde111139d2ea918e152f86783dcc2cbda682c83322cdbc15dd92349b48a3"
+    }
+  ],
+  "excluded": "media, accounts, source batch authorizations, private custom voice styles, original analysis corpus",
+  "licenseReview": "maintainer_confirmed_owned_code_MIT_2026-10-29",
+  "adaptations": [
+    "shared/portable library bridge replaces direct DB and home-path lookups",
+    "Vertex endpoint/project and voice credentials user-configured; no author project default",
+    "five generic voice styles only; integrity receipts for TTS cache",
+    "local analysis retains frame/sound evidence; no private Jev or SFX catalog execution",
+    "project-local detailed archive validation, decisions/snapshots/revision decoded checks and rollback",
+    "user-owned music library selection, license hash checks and audio-plan attachment",
+    "cloud request parsing tested with mocked responses only"
+  ],
+  "licenseScope": "original application code only; third-party notices retain their own licenses"
+}
