@@ -1,5 +1,5 @@
 {
-  "version": "0.7.2-local-candidate",
+  "version": "0.7.3-local-candidate",
   "status": "github_test_preview_candidate",
   "licenseReview": "maintainer_confirmed_MIT_with_third_party_exceptions",
   "motionEntries": 363,
@@ -13,8 +13,8 @@
   "files": [
     {
       "path": ".gitignore",
-      "bytes": 240,
-      "sha256": "0a34d872c3c04efe4c3e58a46ebb3c9b9a19c1cdf52765e555ad4363491b2646"
+      "bytes": 250,
+      "sha256": "7791afc406b2bce9d46483262ca68b90f5ed3c2d64b75b2e1397d1d3bc98173e"
     },
     {
       "path": "LICENSE",
@@ -23,13 +23,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 9381,
-      "sha256": "bbd5c409c70d39178418027d27a3b81a05bade4190fc07d579d2a05a8fb01d81"
+      "bytes": 9472,
+      "sha256": "933da010c5cc6d2eb9f1cd9d7950ef94128546bca7779f4d48174fbfc04889c2"
     },
     {
       "path": "RELEASE-STATUS.md",
-      "bytes": 9256,
-      "sha256": "31f6e7eca00a81ab1a3b43e1b54513cbc8bc3808281db23c2669b99c08d7c891"
+      "bytes": 9966,
+      "sha256": "38afd2e54e4ccdc1273118512a83666b26950880ad0447d8a7d11b2b7d4dd50d"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -73,13 +73,13 @@
     },
     {
       "path": "docs/项目介绍.md",
-      "bytes": 1121,
-      "sha256": "623a9fcf138afc863caf34d98fce91146960dfebced53ba6d2de5ecf61feca2f"
+      "bytes": 1761,
+      "sha256": "6ae475726cf8599e8dc71b1f06a68c8cf92c769df4dd4eb40a029b03be5bdc62"
     },
     {
       "path": "docs/首次使用.md",
-      "bytes": 7841,
-      "sha256": "1ef60c621012499f104e38812c24740d69f4e4b9951fd9bcdcce131ce1a05865"
+      "bytes": 8323,
+      "sha256": "70b9376328046e3d1bab1e2e83f585bd5720f7c1fe73ff225eff9b4325a0807b"
     },
     {
       "path": "docs/首次安装自检报告.md",
@@ -178,8 +178,8 @@
     },
     {
       "path": "scripts/package.py",
-      "bytes": 6445,
-      "sha256": "8db1abc48640a588fc8b2cf5403beeb6e89ef2949143fb3380a2205dbc60e532"
+      "bytes": 6480,
+      "sha256": "a5753a30fd3d5a39523972015316ceed9c984fb7fbb0b37e8a2a26df71cb9ccd"
     },
     {
       "path": "skills/video-asset-library/SKILL.md",
@@ -198,13 +198,18 @@
     },
     {
       "path": "skills/video-making-kit/SKILL.md",
-      "bytes": 6087,
-      "sha256": "292ca9fc99f04f66e2502d90a6ba545165e861a0d323e9d9e1fe928b15c78d30"
+      "bytes": 6468,
+      "sha256": "b100cf923d56017110b488d94f65699d9a58f1e82f3c2301b72a2515a0993852"
     },
     {
       "path": "skills/video-making-kit/references/commands.md",
       "bytes": 5074,
       "sha256": "e5b255e3e74ca1cadea1b77fb9afd72d4f9ca53196d9453b4fca617a4b23dd23"
+    },
+    {
+      "path": "skills/video-making-kit/references/environment-setup.md",
+      "bytes": 3464,
+      "sha256": "2dc4635e717f414bebf6b1a98fbd8cfcae479655d33026e34ca9deeda3d06544"
     },
     {
       "path": "skills/video-making-kit/references/production.md",
@@ -219,7 +224,7 @@
     {
       "path": "skills/video-making-kit/scripts/video_make.py",
       "bytes": 25125,
-      "sha256": "d697c234905050f08c05b925e0fc6a1def1a9428896056ee01bb5de9be31fdf3"
+      "sha256": "f675f0e139f8ff239e1144834a3e1dcefde3a69739b1c0aa85f0e2dfa16c2e5e"
     },
     {
       "path": "skills/video-motion-kit/SKILL.md",

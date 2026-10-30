@@ -28,7 +28,7 @@ def files():
     chosen += [SKILL / 'vendor/video-shots' / n for n in ('LICENSE', 'README.md', 'scripts/video-shots.mjs',
                                                         'scripts/report.js', 'scripts/report.css')]
     making = ROOT / 'skills/video-making-kit'
-    chosen += [making / n for n in ('SKILL.md', 'scripts/video_make.py', 'references/commands.md', 'references/production.md', 'references/promo-pitfalls.md')]
+    chosen += [making / n for n in ('SKILL.md', 'scripts/video_make.py', 'references/commands.md', 'references/production.md', 'references/promo-pitfalls.md', 'references/environment-setup.md')]
     motion = ROOT / 'skills/video-motion-kit'
     subprocess.run([sys.executable, '-B', str(motion / 'scripts/motion.py'), 'audit'], check=True, capture_output=True)
     chosen += [motion / n for n in ('SKILL.md', 'scripts/motion.py', 'references/usage.md', 'references/catalog.json', 'references/provenance.json')]
@@ -71,7 +71,7 @@ def main():
     if out.exists():
         raise ValueError('目标已存在，拒绝覆盖')
     sources = files()
-    manifest = {'version': '0.7.2-local-candidate', 'status': 'github_test_preview_candidate',
+    manifest = {'version': '0.7.3-local-candidate', 'status': 'github_test_preview_candidate',
                 'licenseReview': 'maintainer_confirmed_MIT_with_third_party_exceptions', 'motionEntries': 363, 'existingMediaIncluded': False, 'productionToolsIncluded': True, 'promoPitfallRules': 24, 'cloudCredentialsIncluded': False, 'ownAssetLibraryEntryIncluded': True, 'reviewPluginIncluded': True, 'reviewNodeModulesIncluded': False, 'files': []}
     payloads = []
     for p in sources:
@@ -82,7 +82,7 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(out, 'x', compression=zipfile.ZIP_DEFLATED) as archive:
         for relative, data in payloads:
-            info = zipfile.ZipInfo('video-workflow-kit-v0.7.2/' + relative, date_time=(2026, 1, 1, 0, 0, 0))
+            info = zipfile.ZipInfo('video-workflow-kit-v0.7.3/' + relative, date_time=(2026, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, data)

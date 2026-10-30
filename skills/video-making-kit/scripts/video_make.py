@@ -16,7 +16,7 @@ import sys
 import tempfile
 from pathlib import Path
 
-VERSION = '0.7.2-local-candidate'
+VERSION = '0.7.3-local-candidate'
 
 
 def sha(path):
